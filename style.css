@@ -10,8 +10,8 @@ html{
 }
 
 :root{
-    --primaria: #4f46e5
-    --secundaria: #7c3aed
+    --primaria: #0d0f36
+    --secundaria: #294380
     --escuro: #0f172a
     --maisEscuro: #0a0f1c
     --claro: #e2e8f0
@@ -19,15 +19,15 @@ html{
 }
 
 body{
-    background-color: var(--escuro);
-    color: var(--claro);
+    background-color: #0d0f36;
+    color: #e2e8f0;
 
 }
 
 .navegacao{
     position: fixed;
     top: 0;
-    color: rgba(15, 23, 42, 0.8);
+    color: rgba(15, 23, 42, 0.5);
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
@@ -43,7 +43,7 @@ body{
 
 .menu-link{
     text-decoration: none;
-    color: var(--claro);
+    color: #e2e8f0;
     font-weight: 500;
     position: relative;
     padding: 0.5rem 0;
@@ -56,9 +56,184 @@ body{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    background-color: #e2e8f0;
+    transition: width 0.5s ease;
 }
 
 .menu-link:hover::after{
     width: 100%;
+}
+
+.cabecalho{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.foto-perfil{
+    width: 350px;
+    height: 350px;
+    box-shadow: 0px 10px 25px 8px rgba(0,0,0,0.43);
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+h1{
+    font-size: 2.5rem;
+    color: #e2e8f0;
+    font-weight: bold;
+    margin: 20px;
+    
+}
+
+.cabecalho-sub-titulo{
+    font-size: 1rem;
+    color: #e2e8f0;
+}
+
+.sobre{
+    padding: 6rem, 2rem;
+}
+
+.sobre-titulo{
+    font-size: 2.5rem;
+    color: #e2e8f0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sobre-caixa{
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sobre-paragrafo{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.projetos{
+    padding: 6rem 2rem;
+}
+
+.projetos-caixa{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+
+}
+
+.projetos-card{
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.projetos-titulo{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.projetos-card:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+
+}
+
+.projetos-imagem{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-projetos{
+    margin-bottom: 5px;
+
+}
+
+.paragrafo-projetos{
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;
+
+}
+
+.caixas-texto-projeto{
+    padding: 1.5rem;
+}
+
+.contatos{
+    padding: 6rem 2rem;
+}
+
+.contatos-titulos{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.formulario-contato{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    
+}
+
+.nome-form{
+    margin-bottom: 1.5rem;
+}
+
+.campo-form{
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.botao-form{
+    color: #e2e8f0;
+    background: linear-gradient(45deg, #075e54, #128c7e) ;
+    padding: 1rem 2 rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.botao-form:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(7, 94, 84, 0.4);
+}
+
+.particulas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: 
+    radial-gradient(circle at 10% 20%, #0d0f36 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, #294380 0%, transparent 20%),
+    #0a0f1c;
 }
